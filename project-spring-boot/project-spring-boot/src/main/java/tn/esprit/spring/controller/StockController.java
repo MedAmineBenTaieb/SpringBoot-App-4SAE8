@@ -22,11 +22,16 @@ public class StockController {
 	@Autowired
 	StockService stockService;
 
+	
+// Postman test : GET : http://localhost:8080/api/allstocks
+	
 	@ApiOperation(value = "Récupérer la liste des stocks")
-	@GetMapping("/stocks")
+	@GetMapping("/allstocks")
 	private List<Stock> getAllStocks() {
 		return stockService.retrieveAllStocks();
 	}
+
+// Postman test : GET :	http://localhost:8080/api/stocks/2
 
 	@ApiOperation(value = "Récupérer un stock par son ID")
 	@GetMapping("/stocks/{id}")
@@ -34,6 +39,8 @@ public class StockController {
 		return stockService.retrieveStock(id);
 	}
 
+// Postman test : POST : http://localhost:8080/api/stocks
+	
 	@ApiOperation(value = "Ajouter un stock")
 	@PostMapping("/stocks")
 	private Stock saveStock(@RequestBody Stock s) {
@@ -41,6 +48,7 @@ public class StockController {
 		return savedStock;
 	}
 
+	
 	@ApiOperation(value = "Modifier un stock")
 	@PutMapping("/stocks")
 	private Stock updateStock(@RequestBody Stock s) {
