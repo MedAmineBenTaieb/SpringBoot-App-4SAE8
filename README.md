@@ -1,7 +1,16 @@
 # springboot-application-4SAE8
 ### Spring boot project - class 4SAE8
 
+
 ( Client Controller + Stock Controller + Swagger + Lombok ...etc) 
+
+- MVC REST - Swagger ( 11 November 2021)
+- Test Unitaires + Lombok 
+- Spring Data JPA JPQL (31 october 2021)
+- Crud Repository (27 october 2021) 
+- Spring Data JPA : Associations (20 october 2021) 
+- Spring Data JPA ( 13 october 2021)
+
 
 
 
