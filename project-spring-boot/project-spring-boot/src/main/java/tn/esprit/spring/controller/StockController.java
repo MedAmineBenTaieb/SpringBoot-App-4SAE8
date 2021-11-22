@@ -48,16 +48,18 @@ public class StockController {
 		return savedStock;
 	}
 
+// Postman test : PUT : http://localhost:8080/api/modifystocks
 	
 	@ApiOperation(value = "Modifier un stock")
-	@PutMapping("/stocks")
+	@PutMapping("/modifystocks")
 	private Stock updateStock(@RequestBody Stock s) {
 		Stock updatedStock = stockService.updateStock(s);
 		return updatedStock;
 	}
-
+// Postman test :  DELETE : http://localhost:8080/api/deletestocks/3
+	
 	@ApiOperation(value = "Supprimer un stock")
-	@DeleteMapping("/stocks/{id}")
+	@DeleteMapping("/deletestocks/{id}")
 	private void deleteClient(@PathVariable("id") Long id) {
 		stockService.deleteStock(id);
 	}
