@@ -19,9 +19,6 @@
 file : C:\Users\medaminebt\Downloads\project-spring-boot\project-spring-boot\src\main\resources\application.properties
 
 
-create empty file : 
-
-
 C:/Users/medaminebt/Downloads/project-spring-boot/project-spring-boot/spring_logs/spring_log_file.log
 
 
@@ -74,5 +71,63 @@ Generate getters & setters for : client.java , stock.java , facture.java ...etc
 
 ### TEST on postman : 
 
-GET :  
-http://localhost:8080/api/clients/
+* GET :  
+http://localhost:8080/api/allstocks/
+
+![ss_getallstocks](https://i.imgur.com/xRRaKzE.png)
+<br /><br />
+![ss getallstocks](https://i.imgur.com/qp4uWmd.png)
+
+
+
+* GET :   
+http://localhost:8080/api/stocks/2
+
+![ss_getallstocks](https://i.imgur.com/yfgbs25.png)
+![ss_getallstocks_](https://i.imgur.com/xr0GvBt.png)
+![ss_getallstocks_1](https://i.imgur.com/PJ0KOJC.png)
+
+
+* add a stock to DB -> POST : 
+http://localhost:8080/api/stocks/
+
+![ss_add new stock](https://i.imgur.com/zbehjBI.png)
+![ss_add new stock _ db](https://i.imgur.com/I9htSUP.png)
+
+* Modify stocks ->  PUT : http://localhost:8080/api/modifystocks
+
+![ss _ modify stocks](https://i.imgur.com/0eEiSVX.png)
+
+
+* delete a stock from db -> DELETE : http://localhost:8080/api/deletestocks/3
+![ss_delete a stock from db](https://i.imgur.com/oArcXD9.png)
+
+
+
+
+///////////////////////////////////////////////////////////////
+
+
+* clients controller: 
+![ss_clients _ controller _ code](https://i.imgur.com/L6s3KHU.png)
+
+
+
+* add client -> POST :  http://localhost:8080/api/addclients/
+![ss_addclients](https://i.imgur.com/nJly7Tv.png)
+
+![ss_add_clients_db](https://i.imgur.com/f2IUkaH.png)
+
+
+* Modify a client -> PUT :  http://localhost:8080/api/modifyclients/
+![ss_modify_client](https://i.imgur.com/OdFhqdN.png)
+
+![ss_modifyclients_db](https://i.imgur.com/eREaNjn.png)
+
+
+* show all the clients -> GET : http://localhost:8080/api/allclients/
+![ss_show all clients](https://i.imgur.com/UEYCzqD.png)
+
+
+* delete a client ->  DELETE :  http://localhost:8080/api/deleteclients/1
+![ss_delete_a_client](https://i.imgur.com/4Tprl64.png)
