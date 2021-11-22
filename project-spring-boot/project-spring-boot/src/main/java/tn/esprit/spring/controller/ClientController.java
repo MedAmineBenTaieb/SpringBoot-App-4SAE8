@@ -23,7 +23,7 @@ public class ClientController {
 	ClientServiceImpl clientService;
 
 	@ApiOperation(value = "Récupérer la liste des clients")
-	@GetMapping("/clients")
+	@GetMapping("/allclients")
 	private List<Client> getAllClients() {
 		return clientService.retrieveAllClients();
 	}
@@ -35,21 +35,21 @@ public class ClientController {
 	}
 
 	@ApiOperation(value = "Ajouter un client")
-	@PostMapping("/clients")
+	@PostMapping("/addclients")
 	private Client saveClient(@RequestBody Client client) {
 		Client savedClient = clientService.addClient(client);
 		return savedClient;
 	}
 
 	@ApiOperation(value = "Modifier un client")
-	@PutMapping("/clients")
+	@PutMapping("/modifyclients")
 	private Client updateClient(@RequestBody Client client) {
 		Client updatedClient = clientService.updateClient(client);
 		return updatedClient;
 	}
 
 	@ApiOperation(value = "Supprimer un client")
-	@DeleteMapping("/clients/{id}")
+	@DeleteMapping("/deleteclients/{id}")
 	private void deleteClient(@PathVariable("id") Long id) {
 		clientService.deleteClient(id);
 	}
